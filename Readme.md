@@ -125,8 +125,8 @@ cp -r models/research/object_detection   .
 Generate the record file required for pipeline configuration
 
 ```
-$python generate_tfrecord.py --csv_input=data/train_labels.csv --output_path=data/train.record
-$python generate_tfrecord.py --csv_input=data/test_labels.csv --output_path=data/test.record
+$python generate_tfrecord.py --csv_input=data/train_labels.csv --output_path=data/train.record --image_dir=images/train/
+$python generate_tfrecord.py --csv_input=data/test_labels.csv --output_path=data/test.record --image_dir=images/test/
 
 ```
 
@@ -169,7 +169,7 @@ Download the example model `ssd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz` and ex
 
 ```
 $wget http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz
-$tar -xvzf sd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz
+$tar -xvzf ssd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz
 
 ```
 change the pipeline config accordingly. The changes I made in the config file is higlighted in bold
