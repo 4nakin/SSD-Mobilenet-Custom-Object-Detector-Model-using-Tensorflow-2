@@ -119,6 +119,8 @@ Copy `models/research/official` and `models/research/object_detection` from `ten
 ```
 cp -r models/research/official .
 cp -r models/research/object_detection   .
+# From within TensorFlow/models/research/
+cp object_detection/packages/tf2/setup.py .
 
 ```
 
@@ -429,6 +431,9 @@ $ jupyter notebook
 
 ```
 
-Run the object_detection_tutorial.ipynb file. Make changes accordingly if you are using other directory structure.
+Run the object_detection_tutorial.ipynb file. Make changes accordingly if you are using other directory structure. Follow the steps below to tweak the notebook:
 
+    MODEL_NAME = 'ssd_mobilenet_v2_coco_2018_03_29'
+    PATH_TO_LABELS = 'models/annotations/label_map.pbtxt'
+    PATH_TO_TEST_IMAGES_DIR 
 <img src="mobile_detected.png"/>
